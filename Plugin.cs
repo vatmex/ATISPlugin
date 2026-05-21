@@ -22,9 +22,9 @@ namespace ATISPlugin
         public string Name => "ATIS Editor";
         public static string DisplayName => "ATIS Editor";
 
-        private static readonly string ZuluUrl = "https://raw.githubusercontent.com/badvectors/ATISPlugin/master/Zulu.json";
-        private static readonly string CodesUrl = "https://raw.githubusercontent.com/badvectors/ATISPlugin/master/Codes.json";
-        private static readonly string PresetsUrl = "https://raw.githubusercontent.com/badvectors/ATISPlugin/master/Presets.json";
+        private static readonly string ZuluUrl = "https://raw.githubusercontent.com/vatmex/ATISPlugin/mexico-profile/Zulu.json";
+        private static readonly string CodesUrl = "https://raw.githubusercontent.com/vatmex/ATISPlugin/mexico-profile/Codes.json";
+        private static readonly string PresetsUrl = "https://raw.githubusercontent.com/vatmex/ATISPlugin/mexico-profile/Presets.json";
 
         private static readonly HttpClient Client = new HttpClient();
 
@@ -39,7 +39,8 @@ namespace ATISPlugin
 
         public static string ProfileName()
         {
-            if (Profile.Name.Contains("Australia")) return "Australia";
+            if (Profile.Name.Contains("Mexico")) return "Mexico";
+            else if (Profile.Name.Contains("Australia")) return "Australia";
             else if (Profile.Name.Contains("South Pacific")) return "South Pacific";
             else if (Profile.Name.Contains("Pacific")) return "Pacific";
             else if (Profile.Name.Contains("Combined Oceanic")) return "VATNZ Combined Oceanic";
